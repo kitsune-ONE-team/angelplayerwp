@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.miqote.angelplayerwp"
+          android:versionCode="10"
+          android:versionName="1.0">
+  <uses-sdk android:minSdkVersion="7" />
+  <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+  <uses-feature android:name="android.software.live_wallpaper" />
+  <application
+      android:label="ANGEL PLAYER Live Wallpaper"
+      android:icon="@drawable/icon">
+    <service
+        android:name=".LiveWallpaperService"
+        android:label="ANGEL PLAYER Live Wallpaper"
+        android:permission="android.permission.BIND_WALLPAPER">
+      <intent-filter>
+        <action android:name="android.service.wallpaper.WallpaperService" />
+      </intent-filter>
+      <meta-data android:name="android.service.wallpaper" android:resource="@xml/metadata" />
+    </service>
+    <activity
+        android:name=".LiveWallpaperSettings"
+        android:label="Settings"
+        android:theme="@android:style/Theme.Light.WallpaperSettings"
+        android:exported="true">
+    </activity>
+  </application>
+</manifest>
