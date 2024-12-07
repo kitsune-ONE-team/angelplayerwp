@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:title="Settings"
-                  android:key="settings">
-  <CheckBoxPreference android:key="antialiasing"
-                      android:title="Antialiasing"
-                      android:summary="May decrease performance" />
-  <CheckBoxPreference android:key="rotate"
-                      android:title="Rotate" />
-  <CheckBoxPreference android:key="text"
-                      android:title="Display text"
-                      android:defaultValue="true" />
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Settings"
+    android:key="settings">
+  <CheckBoxPreference
+      android:key="antialiasing"
+      android:title="Antialiasing"
+      android:summary="May decrease performance" />
+  <CheckBoxPreference
+      android:key="rotate"
+      android:title="Rotate" />
+  <CheckBoxPreference
+      android:key="text"
+      android:title="Display text"
+      android:defaultValue="true" />
 </PreferenceScreen>

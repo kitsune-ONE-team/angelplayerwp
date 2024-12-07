@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2014 Yonnji Nyyoka, yonnji@miqote.com
+* Copyright (C) 2014 Yonnji Nyyoka, yonnji@kitsune.one
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License
@@ -15,11 +15,13 @@
 * along with this program; if not, write to the Free Software
 * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 */
-package com.miqote.angelplayerwp;
+package one.kitsune.angelplayerwp;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import one.kitsune.angelplayerwp.R;
+
 
 public class LiveWallpaperSettings extends PreferenceActivity
         implements SharedPreferences.OnSharedPreferenceChangeListener {
