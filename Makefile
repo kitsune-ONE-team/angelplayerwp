@@ -1,13 +1,12 @@
 .PHONY: all
 
-# JDK_PATH=/var/home/yonnji/.jdks/openjdk-23.0.1
-JDK_PATH=/var/home/yonnji/.jdks/temurin-17.0.13
+JDK_PATH=${HOME}/.jdks/temurin-17.0.13
 JAVA_SOURCE_VERSION=16
 ANDROID_VERSION=24
-ANDROID_SDK_PATH=/var/home/yonnji/Android/Sdk
-ANDROID_KEYSTORE_PATH=/var/home/yonnji/.android/debug.keystore
+ANDROID_SDK_PATH=${HOME}/Android/Sdk
+ANDROID_KEYSTORE_PATH=${HOME}/.android/debug.keystore
 ANDROID_KEYSTORE_ALIAS=android
-ANDROID_STUDIO_PATH=/var/home/yonnji/Apps/Google/android-studio-2024.2.1.12-linux
+ANDROID_STUDIO_PATH=${HOME}/Apps/Google/android-studio-2024.2.1.12-linux
 
 ANDROID_SDK_BUILD_TOOLS_PATH=$(ANDROID_SDK_PATH)/build-tools/34.0.0
 ANDROID_LIBRARY_PATH=$(ANDROID_SDK_PATH)/platforms/android-$(ANDROID_VERSION)/android.jar \
@@ -23,7 +22,7 @@ clean:
 src/one/kitsune/angelplayerwp/R.java:
 	$(ANDROID_SDK_BUILD_TOOLS_PATH)/aapt package -v -f -m \
 	-M AndroidManifest.xml -I $(ANDROID_LIBRARY_PATH) -S res \
-	-J $(dir $@)
+	-J src
 
 classes: src/one/kitsune/angelplayerwp/R.java
 	$(JDK_PATH)/bin/javac \
